@@ -1,438 +1,520 @@
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-background: #151719;
-color: #f2f2f2;
-font-family: Arial, Helvetica, sans-serif;
-line-height: 1.6;
+    background: #151719;
+    color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
 :root {
---gold: #d4af37;
---gold-light: #f0d477;
---dark: #151719;
---card: #1d2023;
---gray: #969a9e;
---border: #303438;
+    --gold: #d4af37;
+    --gold-light: #f0d477;
+    --dark: #151719;
+    --card: #1d2023;
+    --gray: #969a9e;
+    --border: #303438;
 }
 
 .container {
-width: 90%;
-max-width: 1100px;
-margin: 0 auto;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header {
-background: #111315;
-border-bottom: 1px solid rgba(212,175,55,.25);
+    background: #111315;
+    border-bottom: 1px solid rgba(212, 175, 55, .25);
 
-position: sticky;
-top: 0;
-z-index: 100;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
-padding: 22px 0;
-
-
+    padding: 22px 0;
 }
 
 .header-inner {
-display: flex;
-align-items: center;
-justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-color: var(--gold);
-text-decoration: none;
+    color: var(--gold);
+    text-decoration: none;
 
-font-size: 28px;
-font-weight: bold;
+    font-size: 28px;
+    font-weight: bold;
 
-letter-spacing: 6px;
-
-
+    letter-spacing: 6px;
 }
 
 nav {
-display: flex;
-gap: 30px;
+    display: flex;
+    gap: 30px;
 }
 
 nav a {
-color: #aaa;
-text-decoration: none;
-font-size: 14px;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
 
-transition: .2s;
-
-
+    transition: .2s;
 }
 
 nav a:hover {
-color: var(--gold);
+    color: var(--gold);
 }
 
-/* HERO */
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-button {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: var(--gold);
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+.menu-button:hover {
+    color: var(--gold-light);
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
-min-height: 650px;
+    min-height: 650px;
 
-display: flex;
-align-items: center;
-
-
+    display: flex;
+    align-items: center;
 }
 
 .hero-content {
-max-width: 800px;
+    max-width: 800px;
 }
 
 .label {
-color: var(--gold);
+    color: var(--gold);
 
-font-size: 11px;
-font-weight: bold;
+    font-size: 11px;
+    font-weight: bold;
 
-letter-spacing: 4px;
+    letter-spacing: 4px;
 
-margin-bottom: 25px;
-
-
+    margin-bottom: 25px;
 }
 
 .hero h1,
 .page-header h1 {
-font-size: clamp(42px, 6vw, 68px);
+    font-size: clamp(42px, 6vw, 68px);
 
-line-height: 1.05;
-font-weight: 500;
-
-
+    line-height: 1.05;
+    font-weight: 500;
 }
 
 .hero h1 span,
 .page-header h1 span {
-color: var(--gold);
+    color: var(--gold);
 }
 
 .hero p {
-color: var(--gray);
+    color: var(--gray);
 
-font-size: 18px;
+    font-size: 18px;
 
-max-width: 650px;
+    max-width: 650px;
 
-margin-top: 30px;
-
-
+    margin-top: 30px;
 }
 
 .button {
-display: inline-block;
+    display: inline-block;
 
-margin-top: 35px;
+    margin-top: 35px;
 
-padding: 14px 25px;
+    padding: 14px 25px;
 
-background: var(--gold);
-color: #111;
+    background: var(--gold);
+    color: #111;
 
-text-decoration: none;
+    text-decoration: none;
 
-font-size: 13px;
-font-weight: bold;
+    font-size: 13px;
+    font-weight: bold;
 
-border-radius: 4px;
+    border-radius: 4px;
 
-transition: .2s;
-
-
+    transition: .2s;
 }
 
 .button:hover {
-background: var(--gold-light);
-transform: translateY(-2px);
+    background: var(--gold-light);
+    transform: translateY(-2px);
 }
 
-/* INTRO */
+
+/* =========================
+   INTRO
+========================= */
 
 .intro {
-padding: 100px 0;
+    padding: 100px 0;
 
-border-top: 1px solid rgba(255,255,255,.08);
-
-
+    border-top: 1px solid rgba(255, 255, 255, .08);
 }
 
 .intro h2,
 .about-text h2 {
-font-size: 40px;
+    font-size: 40px;
 
-font-weight: 500;
+    font-weight: 500;
 
-line-height: 1.2;
-
-
+    line-height: 1.2;
 }
 
 .intro h2 span {
-color: var(--gold);
+    color: var(--gold);
 }
 
 .intro p {
-color: var(--gray);
+    color: var(--gray);
 
-max-width: 750px;
+    max-width: 750px;
 
-margin-top: 25px;
+    margin-top: 25px;
 
-font-size: 17px;
-
-
+    font-size: 17px;
 }
 
-/* PAGE HEADER */
+
+/* =========================
+   PAGE HEADER
+========================= */
 
 .page-header {
-padding: 100px 0 70px;
+    padding: 100px 0 70px;
 }
 
 .page-header p {
-color: var(--gray);
+    color: var(--gray);
 
-max-width: 700px;
+    max-width: 700px;
 
-margin-top: 25px;
+    margin-top: 25px;
 
-font-size: 17px;
-
-
+    font-size: 17px;
 }
 
-/* SERVICES */
+
+/* =========================
+   SERVICES
+========================= */
 
 .services {
-padding-bottom: 110px;
+    padding-bottom: 110px;
 
-display: grid;
+    display: grid;
 
-grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-gap: 20px;
-
-
+    gap: 20px;
 }
 
 .service-card {
-background: var(--card);
+    background: var(--card);
 
-border: 1px solid var(--border);
+    border: 1px solid var(--border);
 
-border-top: 3px solid var(--gold);
+    border-top: 3px solid var(--gold);
 
-padding: 30px;
+    padding: 30px;
 
-min-height: 300px;
+    min-height: 300px;
 
-transition: .25s;
-
-
+    transition: .25s;
 }
 
 .service-card:hover {
-border-color: var(--gold);
+    border-color: var(--gold);
 
-transform: translateY(-5px);
+    transform: translateY(-5px);
 
-box-shadow: 0 15px 40px rgba(0,0,0,.25);
-
-
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
 }
 
 .number {
-color: var(--gold);
+    color: var(--gold);
 
-font-size: 11px;
+    font-size: 11px;
 
-letter-spacing: 2px;
+    letter-spacing: 2px;
 
-margin-bottom: 30px;
-
-
+    margin-bottom: 30px;
 }
 
 .service-card h2 {
-font-size: 21px;
+    font-size: 21px;
 
-font-weight: 500;
+    font-weight: 500;
 
-line-height: 1.35;
+    line-height: 1.35;
 
-margin-bottom: 20px;
-
-
+    margin-bottom: 20px;
 }
 
 .service-card p {
-color: var(--gray);
+    color: var(--gray);
 
-font-size: 14px;
-
-
+    font-size: 14px;
 }
 
-/* ABOUT */
+
+/* =========================
+   ABOUT
+========================= */
 
 .about-text {
-padding-bottom: 120px;
+    padding-bottom: 120px;
 
-max-width: 850px;
-
-
+    max-width: 850px;
 }
 
 .about-text h2 {
-margin-bottom: 35px;
+    margin-bottom: 35px;
 }
 
 .about-text p {
-color: var(--gray);
+    color: var(--gray);
 
-font-size: 17px;
+    font-size: 17px;
 
-margin-bottom: 22px;
-
-
+    margin-bottom: 22px;
 }
 
-/* CONTACTS */
+
+/* =========================
+   CONTACTS
+========================= */
 
 .contacts {
-padding-bottom: 120px;
+    padding-bottom: 120px;
 
-display: grid;
+    display: grid;
 
-grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-gap: 20px;
-
-
+    gap: 20px;
 }
 
 .contact-card {
-background: var(--card);
+    background: var(--card);
 
-border: 1px solid var(--border);
+    border: 1px solid var(--border);
 
-padding: 35px;
+    padding: 35px;
 
-min-height: 170px;
-
-
+    min-height: 170px;
 }
 
 .contact-card a,
 .contact-card p {
-color: var(--gold);
+    color: var(--gold);
 
-text-decoration: none;
+    text-decoration: none;
 
-font-size: 17px;
-
-
+    font-size: 17px;
 }
 
 .contact-card a:hover {
-color: var(--gold-light);
+    color: var(--gold-light);
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-background: #0d0f10;
+    background: #0d0f10;
 
-border-top: 1px solid rgba(212,175,55,.2);
+    border-top: 1px solid rgba(212, 175, 55, .2);
 
-padding: 40px 0;
+    padding: 40px 0;
 
-text-align: center;
-
-
+    text-align: center;
 }
 
 .footer-logo {
-color: var(--gold);
+    color: var(--gold);
 
-font-size: 25px;
+    font-size: 25px;
 
-font-weight: bold;
+    font-weight: bold;
 
-letter-spacing: 5px;
-
-
+    letter-spacing: 5px;
 }
 
 footer p {
-color: #777;
+    color: #777;
 
-font-size: 12px;
+    font-size: 12px;
 
-margin: 8px 0 20px;
-
-
+    margin: 8px 0 20px;
 }
 
 footer small {
-color: #555;
+    color: #555;
 
-font-size: 11px;
-
-
+    font-size: 11px;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 750px) {
 
-nav {
-    display: none;
-}
+    header {
+        padding: 18px 0;
+    }
 
-.hero {
-    min-height: 550px;
-}
+    .logo {
+        font-size: 24px;
+        letter-spacing: 5px;
+    }
 
-.hero h1,
-.page-header h1 {
-    font-size: 40px;
-}
+    /* Показываем кнопку */
 
-.intro h2,
-.about-text h2 {
-    font-size: 32px;
-}
+    .menu-button {
+        display: block;
+    }
 
-.services {
-    grid-template-columns: 1fr;
-}
+    /* Прячем обычное меню */
 
-.contacts {
-    grid-template-columns: 1fr;
-}
+    nav {
+        display: none;
 
-.page-header {
-    padding-top: 70px;
-}
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        background: #111315;
+
+        border-top: 1px solid rgba(212, 175, 55, .25);
+        border-bottom: 1px solid rgba(212, 175, 55, .25);
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px 0;
+    }
+
+    /* Открытое меню */
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+
+        padding: 14px 5%;
+
+        font-size: 15px;
+    }
+
+    nav a:hover {
+        background: rgba(212, 175, 55, .08);
+    }
 
 
+    /* HERO */
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1,
+    .page-header h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    /* INTRO */
+
+    .intro h2,
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+
+    /* SERVICES */
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CONTACTS */
+
+    .contacts {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PAGE HEADER */
+
+    .page-header {
+        padding-top: 70px;
+    }
+
+    .page-header p {
+        font-size: 16px;
+    }
+
+
+    /* ABOUT */
+
+    .about-text {
+        padding-bottom: 80px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
 }

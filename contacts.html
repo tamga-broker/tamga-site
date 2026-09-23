@@ -1,78 +1,134 @@
-<!DOCTYPE html> <html lang="ru"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Контакты — TAMGA</title> <link rel="stylesheet" href="style.css"> </head> <body> <header> <div class="container header-inner">
-    <a href="index.html" class="logo">TAMGA</a>
+<!DOCTYPE html>
+<html lang="ru">
 
-    <nav>
-        <a href="index.html">Главная</a>
-        <a href="services.html">Услуги</a>
-        <a href="about.html">О компании</a>
-        <a href="contacts.html">Контакты</a>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</div>
+    <title>Контакты — TAMGA</title>
 
-</header> <main>
-<section class="page-header container">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <div class="label">
-        КОНТАКТЫ
+<body>
+
+<header>
+    <div class="container header-inner">
+
+        <a href="index.html" class="logo">TAMGA</a>
+
+        <!-- Мобильное меню -->
+        <button class="menu-button" id="menuButton" aria-label="Открыть меню">
+            ☰
+        </button>
+
+        <nav id="mobileNav">
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="about.html">О компании</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+
     </div>
-
-    <h1>
-        Свяжитесь
-        <span>с нами</span>
-    </h1>
-
-    <p>
-        Будем рады ответить на ваши вопросы
-        и обсудить сотрудничество.
-    </p>
-
-</section>
+</header>
 
 
-<section class="contacts container">
+<main>
 
+    <section class="page-header container">
 
-    <div class="contact-card">
-
-        <div class="number">
-            ТЕЛЕФОН
+        <div class="label">
+            КОНТАКТЫ
         </div>
 
-        <a href="tel:+79407571212">
-            +7 (940) 757-12-12
-        </a>
+        <h1>
+            Свяжитесь
+            <span>с нами</span>
+        </h1>
 
-    </div>
+        <p>
+            Будем рады ответить на ваши вопросы
+            и обсудить сотрудничество.
+        </p>
+
+    </section>
 
 
-    <div class="contact-card">
+    <section class="contacts container">
 
-        <div class="number">
-            E-MAIL
+        <div class="contact-card">
+
+            <div class="number">
+                ТЕЛЕФОН
+            </div>
+
+            <a href="tel:+79407571212">
+                +7 (940) 757-12-12
+            </a>
+
         </div>
 
-        <a href="mailto:tam_servis@mail.ru">
-            tam_servis@mail.ru
-        </a>
 
-    </div>
+        <div class="contact-card">
+
+            <div class="number">
+                E-MAIL
+            </div>
+
+            <a href="mailto:tam_servis@mail.ru">
+                tam_servis@mail.ru
+            </a>
+
+        </div>
 
 
-    <div class="contact-card">
+        <div class="contact-card">
 
-        <div class="number">
-            АДРЕС
+            <div class="number">
+                АДРЕС
+            </div>
+
+            <p>
+                г. Сухум,<br>
+                ул. Конфедератов, д. 9
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-logo">
+            TAMGA
         </div>
 
         <p>
-            г. Сухум,<br>
-            ул. Конфедератов, д. 9
+            Таможенное оформление и услуги ВЭД
         </p>
+
+        <small>
+            © 2026 TAMGA
+        </small>
 
     </div>
 
+</footer>
 
-</section>
 
-</main> <footer> <div class="container"> <div class="footer-logo">TAMGA</div> <p>Таможенное оформление и услуги ВЭД</p> <small>© 2026 TAMGA</small> </div> </footer> </body> </html>
+<script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileNav = document.getElementById('mobileNav');
+
+    menuButton.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
